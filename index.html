@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yixuan Chen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      flex-direction: row;
+    }
+
+    .sidebar {
+      background-color: #20232a;
+      color: white;
+      width: 280px;
+      height: 100vh;
+      position: fixed;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .sidebar img {
+      width: 140px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .sidebar h1 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .content {
+      margin-left: 280px;
+      padding: 40px;
+      width: calc(100% - 280px);
+      overflow-y: auto;
+      height: 100vh;
+    }
+
+    .content h2 {
+      margin-top: 30px;
+      color: #007acc;
+    }
+
+    .project {
+      border-left: 4px solid #007acc;
+      background: #f8f8f8;
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+
+    .project a {
+      color: #007acc;
+      text-decoration: none;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 20px;
+      }
+
+      .content {
+        margin-left: 0;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <img src="assets/img/avatar.jpg" alt="Yixuan Chen" />
+    <h1>Yixuan Chen</h1>
+    <p>Research Associate at MBZUAI<br>Visiting Grad Student at UofT</p>
+  </div>
+  <div class="content">
+    <h2>About Me</h2>
+    <p>
+      I'm currently a Research Associate at the Mohamed bin Zayed University of Artificial Intelligence (MBZUAI) 
+      and an International Visiting Graduate Student at the University of Toronto, supervised by Prof. Baochun Li.
+    </p>
+    <p>
+      My research focuses on <strong>distributed and federated learning</strong>, 
+      <strong>robotic control</strong>, and <strong>optimization algorithms</strong>. 
+      I aim to bridge the gap between machine intelligence and physical systems.
+    </p>
+
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Robotic Strawberry Picking with Diffusion</h3>
+      <p><strong>Yixuan Chen</strong>, Xiaomei Zhang, Samuel Hovarth</p>
+      <p>A diffusion policy is used to generate smooth trajectories for a robotic arm in real-world strawberry picking.</p>
+      <a href="assets/pdfs/strawberry_diffusion.pdf">Download PDF</a>
+    </div>
+
+    <div class="project">
+      <h3>Optimizing Flow Dependencies in Distributed ML</h3>
+      <p>Baochun Li, <strong>Yixuan Chen</strong>, Freeman Cheng</p>
+      <p>We formulate flow scheduling under communication dependency constraints in collective communication.</p>
+      <a href="assets/pdfs/flow_dependency.pdf">Download PDF</a>
+    </div>
+
+    <div class="project">
+      <h3>Federated Unlearning via Rank-One Adaptation</h3>
+      <p><strong>Yixuan Chen</strong>, Samuel Hovarth</p>
+      <p>A method to efficiently remove client contributions from federated models using a low-rank perturbation mechanism.</p>
+      <a href="assets/pdfs/fed_unlearning.pdf">Download PDF</a>
+    </div>
+
+    <div class="project">
+      <h3>Gradient Leakage in Production Federated Learning</h3>
+      <p><strong>Yixuan Chen</strong>, Ningxin Zhao, Sijia Liu</p>
+      <p>Investigates practical gradient inversion attacks and defenses in real-world federated systems.</p>
+      <a href="assets/pdfs/gradient_leakage.pdf">Download PDF</a>
+    </div>
+
+    <div class="project">
+      <h3>A Lightweight Collective Scheduling Framework</h3>
+      <p><strong>Yixuan Chen</strong>, Baochun Li</p>
+      <p>We design a simplified collective scheduling layer for GPU clusters to maximize link utilization.</p>
+      <a href="assets/pdfs/collective_scheduling.pdf">Download PDF</a>
+    </div>
+  </div>
+</body>
+</html>
